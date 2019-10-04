@@ -7,6 +7,17 @@
 // 不能校验".*abcd"这种有歧义的正则表达式
 bool isMatch(char *s, char *p) {
   char *p_input = s, *p_regex = p;
+  if (*s == '\0' || *p == '\0') {
+    if (*s == '\0' && *p == '\0') {
+      return true;
+    } else {
+      if (p[0] == '.' && p[1] == '*') {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  }
   do {
     // 当正则指针指向的字符不是'*'时，该字符串才是有效的正则表达式。
     // 首先检验当前正则指针指向的字符是一般字符还是'.'，再检验后一位的字符
@@ -47,7 +58,8 @@ bool isMatch(char *s, char *p) {
 
 int main() {
   char string_input[100], string_regex[100];
-  scanf("%s%s", string_input, string_regex);
+  gets(string_input);
+  gets(string_regex);
   bool status = isMatch(string_input, string_regex);
   if (status == true) {
     printf("true\n");
