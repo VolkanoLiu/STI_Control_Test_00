@@ -12,9 +12,9 @@ bool isMatch(char *s, char *p) {
       return true;
     } else {
       if (p[0] == '.' && p[1] == '*') {
-        return 1;
+        return true;
       } else {
-        return 0;
+        return false;
       }
     }
   }
