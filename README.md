@@ -1,10 +1,12 @@
 # 正则表达式习题
 
+这是一个支持匹配 '.' 与 '\*' 匹配的函数，使用多次递归解决了 ".\*' 的匹配问题。
+
 ## Building
 
 在终端中直接编译 [task.c](https://github.com/VolkanoLiu/STI_Control_Test_00/blob/master/task.c) 即可
 ```bash
-gcc task.c -o task
+gcc task.c -o task.out
 ```
 
 ## Usage
@@ -15,7 +17,7 @@ gcc task.c -o task
 
 匹配可以涵盖整个字符串 s。
 * 说明: 
-
+  
     s 可能为空，且只包含从 a-z 的小写字母。
 
     p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
@@ -73,6 +75,17 @@ gcc task.c -o task
     ```
 
     输出: `false `
+
+## Changelog
+
+### (2019/10/08)
+
+*  完全重写了函数
+*  使用递归算法，很好地解决了示例6类型的问题
+
+### (2019/10/03)
+
+*  采用传统的线性流程，无法解决示例6类型的问题
 
 ## License
 
