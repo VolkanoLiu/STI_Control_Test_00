@@ -74,7 +74,17 @@ gcc task.c -o task.out
     mis*is*p*.
     ```
 
-    输出: `false `
+    输出: `false`
+
+*  示例 6: 
+ 
+    输入: 
+    ```
+    aaabcdef
+    a*.*f
+    ```
+
+    输出: `true`
 
 ## Changelog
 
