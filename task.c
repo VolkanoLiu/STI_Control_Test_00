@@ -21,6 +21,7 @@ bool isMatch(char *s, char *p) {
   }
   // if p_length >= 2 and p[1] == '*'
   if (p_length >= 2 && p[1] == '*') {
+    // if one of the expressions returns true, this function will return true.
     return isMatch(s, p + 2) ||
            ((s[0] == p[0] || p[0] == '.') && isMatch(s + 1, p));
   }
